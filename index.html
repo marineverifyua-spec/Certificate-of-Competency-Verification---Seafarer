@@ -1,372 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate of Competency</title>
 
-<title>Seafarer Certificate Information</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-<style>
+        body {
+            margin: 0;
+            padding: 30px 12px;
+            background: #eef2f5;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111;
+        }
 
-body{
-    margin:0;
-    padding:20px;
-    background:#eef2f7;
-    font-family:Arial, sans-serif;
-}
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+        }
 
-.container{
-    max-width:1100px;
-    margin:auto;
-    background:white;
-    padding:30px;
-    border-radius:18px;
-    box-shadow:0 5px 25px rgba(0,0,0,0.15);
-}
+        .certificate-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 40px auto;
+        }
 
-h1{
-    text-align:center;
-    color:#003b70;
-}
+        .section-title {
+            background: #064579;
+            color: white;
+            font-size: 38px;
+            padding: 25px 30px;
+            border-radius: 18px;
+            margin: 35px 0 28px 0;
+        }
 
-.subtitle{
-    text-align:center;
-    color:#555;
-    margin-bottom:30px;
-}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 45px;
+            font-size: 20px;
+        }
 
+        th {
+            background: #176ca8;
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-size: 24px;
+        }
 
-.image-box{
-    text-align:center;
-    margin-bottom:40px;
-}
+        td {
+            border: 2px solid #cccccc;
+            padding: 20px;
+            vertical-align: middle;
+            line-height: 1.4;
+        }
 
+        tr:nth-child(even) td {
+            background: #f3f6f9;
+        }
 
-.image-box img{
-    width:100%;
-    max-width:900px;
-    border:2px solid #ddd;
-    border-radius:15px;
-}
+        td:first-child {
+            width: 32%;
+        }
 
+        @media (max-width: 600px) {
 
+            body {
+                padding: 12px 6px;
+            }
 
-.title{
+            .container {
+                padding: 18px;
+            }
 
-    margin-top:35px;
-    background:#003b70;
-    color:white;
-    padding:15px;
-    border-radius:8px;
-    font-size:22px;
+            .section-title {
+                font-size: 27px;
+                padding: 20px;
+                border-radius: 15px;
+            }
 
-}
+            table {
+                font-size: 16px;
+            }
 
+            th {
+                font-size: 18px;
+                padding: 14px;
+            }
 
-
-table{
-
-    width:100%;
-    border-collapse:collapse;
-    margin-top:15px;
-
-}
-
-
-th{
-
-    background:#1465a5;
-    color:white;
-    padding:12px;
-
-}
-
-
-td{
-
-    border:1px solid #ccc;
-    padding:12px;
-
-}
-
-
-tr:nth-child(even){
-
-    background:#f6f9fc;
-
-}
-
-
-.box{
-
-    margin-top:20px;
-    padding:20px;
-    background:#f4f7fa;
-    border-left:5px solid #003b70;
-    border-radius:10px;
-
-}
-
-
-</style>
-
+            td {
+                padding: 14px;
+            }
+        }
+    </style>
 </head>
-
 
 <body>
 
-
 <div class="container">
 
+    <!-- ORIGINAL CERTIFICATE IMAGE -->
+    <img
+        class="certificate-image"
+        src="IMG_4535.jpeg"
+        alt="Certificate"
+    >
 
-<h1>
-Certificate Of Competency
-</h1>
 
+    <!-- PERSONAL INFORMATION -->
 
-<div class="subtitle">
-Seafarer Maritime Document Information
-</div>
+    <div class="section-title">
+        Personal Information
+    </div>
 
+    <table>
 
+        <tr>
+            <th>Field</th>
+            <th>Information</th>
+        </tr>
 
-<div class="image-box">
+        <tr>
+            <td>Surname</td>
+            <td>MOTAMEDKIA</td>
+        </tr>
+
+        <tr>
+            <td>Given Name</td>
+            <td>ALIREZA</td>
+        </tr>
+
+        <tr>
+            <td>Father's Name</td>
+            <td>MAJID</td>
+        </tr>
 
-<img src="IMG_4535.jpeg"> alt="Seafarer Certificate">
+        <tr>
+            <td>Date of Birth</td>
+            <td>14.11.2003</td>
+        </tr>
 
-</div>
+        <tr>
+            <td>Nationality</td>
+            <td>IRAN</td>
+        </tr>
 
+        <tr>
+            <td>Document No.</td>
+            <td>UA-COC-2023-0142</td>
+        </tr>
 
+    </table>
 
 
+    <!-- CERTIFICATE DETAILS -->
 
-<div class="title">
-Personal Information
-</div>
-
-
-<table>
-
-<tr>
-<th>Field</th>
-<th>Information</th>
-</tr>
-
-
-<tr>
-<td>Full Name</td>
-<td>Alireza Motamed Kia</td>
-</tr>
-
-
-<tr>
-<td>Father Name</td>
-<td>Majid</td>
-</tr>
-
-
-<tr>
-<td>Date of Birth</td>
-<td>14.11.2003</td>
-</tr>
-
-
-<tr>
-<td>Nationality</td>
-<td>Iran</td>
-</tr>
-
-
-<tr>
-<td>Document Type</td>
-<td>Certificate of Competency for Seafarers</td>
-</tr>
-
-
-</table>
-
-
-
-
-
-
-
-<div class="title">
-Certificate Details
-</div>
-
-
-<table>
-
-
-<tr>
-<th>Category</th>
-<th>Description</th>
-</tr>
-
-
-<tr>
-<td>Issuing Authority</td>
-<td>State Service for Maritime and Inland Waterway Transport of Ukraine</td>
-</tr>
-
-
-<tr>
-<td>Ministry</td>
-<td>Ministry of Infrastructure of Ukraine</td>
-</tr>
-
-
-<tr>
-<td>Country</td>
-<td>Ukraine</td>
-</tr>
-
-
-<tr>
-<td>Convention</td>
-<td>STCW 1978 as amended</td>
-</tr>
-
-
-<tr>
-<td>Sector</td>
-<td>Maritime Transportation</td>
-</tr>
-
-
-<tr>
-<td>Language</td>
-<td>English / Ukrainian</td>
-</tr>
-
-
-</table>
-
-
-
-
-
-
-
-<div class="title">
-Certificate Records
-</div>
-
-
-<table>
-
-
-<tr>
-<th>Item</th>
-<th>Value</th>
-</tr>
-
-
-<tr>
-<td>Certificate Number</td>
-<td>IR-2026-4...</td>
-</tr>
-
-
-<tr>
-<td>Date Of Issue</td>
-<td>01.01.202...</td>
-</tr>
-
-
-<tr>
-<td>Limitations</td>
-<td>None</td>
-</tr>
-
-
-<tr>
-<td>Function</td>
-<td>Navigation</td>
-</tr>
-
-
-<tr>
-<td>Level</td>
-<td>Operational / Management</td>
-</tr>
-
-
-</table>
-
-
-
-
-
-
-
-<div class="title">
-Professional Qualifications
-</div>
-
-
-<table>
-
-
-<tr>
-<th>Position</th>
-<th>Description</th>
-</tr>
-
-
-<tr>
-<td>Navigation Officer</td>
-<td>Officer responsible for navigation duties</td>
-</tr>
-
-
-<tr>
-<td>Watchkeeping Officer</td>
-<td>Bridge watch responsibilities</td>
-</tr>
-
-
-<tr>
-<td>Marine Officer</td>
-<td>Maritime professional qualification</td>
-</tr>
-
-
-</table>
-
-
-
-
-
-
-
-<div class="title">
-Additional Information
-</div>
-
-
-<div class="box">
-
-<p>
-This digital page contains the uploaded certificate image and related document information.
-</p>
-
-<p>
-The document belongs to the maritime transportation field and contains competency details for seafarers.
-</p>
-
-<p>
-All information displayed is based on the provided document image.
-</p>
+    <div class="section-title">
+        Certificate Details
+    </div>
+
+    <table>
+
+        <tr>
+            <th>Field</th>
+            <th>Information</th>
+        </tr>
+
+        <tr>
+            <td>Document Type</td>
+            <td>
+                Certificate of Competency for Seafarer
+            </td>
+        </tr>
+
+        <tr>
+            <td>Date of Issue</td>
+            <td>15.05.2023</td>
+        </tr>
+
+        <tr>
+            <td>Valid Until</td>
+            <td>15.05.2028</td>
+        </tr>
+
+        <tr>
+            <td>Issuing Authority</td>
+            <td>
+                State Service for Maritime and Inland Waterway
+                Transport and Shipping of Ukraine
+            </td>
+        </tr>
+
+        <tr>
+            <td>Country</td>
+            <td>Ukraine</td>
+        </tr>
+
+    </table>
+
+
+    <!-- MARITIME POSITIONS -->
+
+    <div class="section-title">
+        Maritime Positions / Ranks
+    </div>
+
+    <table>
+
+        <tr>
+            <th>Position</th>
+            <th>English</th>
+        </tr>
+
+        <tr>
+            <td>Старший помічник капітана</td>
+            <td>Chief Officer</td>
+        </tr>
+
+        <tr>
+            <td>Другий помічник капітана</td>
+            <td>Second Officer</td>
+        </tr>
+
+        <tr>
+            <td>Вахтовий помічник капітана</td>
+            <td>
+                OOW – Officer of the Watch
+            </td>
+        </tr>
+
+    </table>
+
+
+    <!-- DOCUMENTS AND CERTIFICATES -->
+
+    <div class="section-title">
+        Documents and Certificates
+    </div>
+
+    <table>
+
+        <tr>
+            <th>No.</th>
+            <th>Document / Certificate</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>
+                Certificate of Competency for Seafarer
+            </td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>
+                Seafarer's Identity Document
+                (Seafarer's Passport)
+            </td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>
+                Safety at Sea
+                (Four Basic STCW Certificates)
+            </td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>
+                Fire Safety and Fire Fighting
+                (Advanced Level)
+            </td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>
+                Elementary First Aid
+            </td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>
+                Personal Survival Techniques
+            </td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>
+                Seafarer's Medical Certificate
+            </td>
+        </tr>
+
+    </table>
 
 </div>
-
-
-
-</div>
-
 
 </body>
 </html>
