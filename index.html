@@ -1,315 +1,388 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate of Competency Verification — Seafarer</title>
 
-    <title>Certificate of Competency</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    body {
+      margin: 0;
+      background: #eef4f8;
+      color: #123d73;
+      font-family: Georgia, "Times New Roman", serif;
+    }
 
-        body {
-            margin: 0;
-            padding: 30px 12px;
-            background: #eef2f5;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #111;
-        }
+    .card {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 28px;
+      background: white;
+      border: 3px solid #14569a;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    }
 
-        .container {
-            width: 100%;
-            max-width: 900px;
-            margin: auto;
-            background: #ffffff;
-            padding: 30px;
-        }
+    header {
+      text-align: center;
+      border-bottom: 2px solid #14569a;
+      padding-bottom: 20px;
+    }
 
-        .certificate-image {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto 40px auto;
-        }
+    .trident {
+      font-size: 48px;
+      color: #d9aa00;
+    }
 
-        .section-title {
-            background: #064579;
-            color: white;
-            font-size: 38px;
-            padding: 25px 30px;
-            border-radius: 18px;
-            margin: 35px 0 28px 0;
-        }
+    .country {
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 45px;
-            font-size: 20px;
-        }
+    .authority {
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 1.4;
+      margin-top: 8px;
+    }
 
-        th {
-            background: #176ca8;
-            color: white;
-            padding: 20px;
-            text-align: left;
-            font-size: 24px;
-        }
+    h1 {
+      font-size: 30px;
+      text-transform: uppercase;
+      margin: 20px 0 8px;
+    }
 
-        td {
-            border: 2px solid #cccccc;
-            padding: 20px;
-            vertical-align: middle;
-            line-height: 1.4;
-        }
+    .sub {
+      font-family: Arial, sans-serif;
+      color: #60758a;
+    }
 
-        tr:nth-child(even) td {
-            background: #f3f6f9;
-        }
+    .content {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 28px;
+      margin-top: 25px;
+    }
 
-        td:first-child {
-            width: 32%;
-        }
+    .photo {
+      text-align: center;
+    }
 
-        @media (max-width: 600px) {
+    .photo img {
+      width: 100%;
+      border: 3px solid #14569a;
+    }
 
-            body {
-                padding: 12px 6px;
-            }
+    .verified {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 7px 12px;
+      border: 1px solid #79b77e;
+      border-radius: 20px;
+      background: #e8f4e9;
+      color: #216b2a;
+      font: bold 13px Arial, sans-serif;
+    }
 
-            .container {
-                padding: 18px;
-            }
+    .details {
+      font-family: Arial, sans-serif;
+    }
 
-            .section-title {
-                font-size: 27px;
-                padding: 20px;
-                border-radius: 15px;
-            }
+    .row {
+      display: grid;
+      grid-template-columns: 230px 1fr;
+      gap: 10px;
+      padding: 11px 0;
+      border-bottom: 1px solid #d8e1ea;
+    }
 
-            table {
-                font-size: 16px;
-            }
+    .label {
+      font-weight: bold;
+      color: #174d84;
+    }
 
-            th {
-                font-size: 18px;
-                padding: 14px;
-            }
+    .value {
+      color: #222;
+    }
 
-            td {
-                padding: 14px;
-            }
-        }
-    </style>
+    .section {
+      border-top: 2px solid #14569a;
+      margin-top: 25px;
+      padding-top: 18px;
+    }
+
+    .section h2 {
+      margin: 0 0 12px;
+    }
+
+    .list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .item {
+      padding: 9px 11px;
+      border-left: 4px solid #14569a;
+      background: #f4f8fb;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 25px;
+      font: 12px Arial, sans-serif;
+      color: #718293;
+    }
+
+    @media (max-width: 700px) {
+
+      .content,
+      .list {
+        grid-template-columns: 1fr;
+      }
+
+      .row {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        margin: 10px;
+        padding: 16px;
+      }
+
+      h1 {
+        font-size: 23px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+<main class="card">
 
-    <!-- ORIGINAL CERTIFICATE IMAGE -->
-    <img
-        class="certificate-image"
-        src="IMG_4544.jpeg"
-        alt="Certificate"
-    >
+  <header>
 
+    <div class="trident">⚓</div>
 
-    <!-- PERSONAL INFORMATION -->
-
-    <div class="section-title">
-        Personal Information
+    <div class="country">
+      УКРАЇНА
     </div>
 
-    <table>
-
-        <tr>
-            <th>Field</th>
-            <th>Information</th>
-        </tr>
-
-        <tr>
-            <td>Surname</td>
-            <td>MOTAMEDKIA</td>
-        </tr>
-
-        <tr>
-            <td>Given Name</td>
-            <td>ALIREZA</td>
-        </tr>
-
-        <tr>
-            <td>Father's Name</td>
-            <td>MAJID</td>
-        </tr>
-
-        <tr>
-            <td>Date of Birth</td>
-            <td>14.11.2003</td>
-        </tr>
-
-        <tr>
-            <td>Nationality</td>
-            <td>IRAN</td>
-        </tr>
-
-        <tr>
-            <td>Document No.</td>
-            <td>UA-COC-2023-0142</td>
-        </tr>
-
-    </table>
-
-
-    <!-- CERTIFICATE DETAILS -->
-
-    <div class="section-title">
-        Certificate Details
+    <div class="authority">
+      ДЕРЖАВНА СЛУЖБА МОРСЬКОГО І ВНУТРІШНЬОГО<br>
+      ВОДНОГО ТРАНСПОРТУ ТА СУДНОПЛАВСТВА УКРАЇНИ
     </div>
 
-    <table>
+    <h1>
+      Certificate of Competency Verification
+    </h1>
 
-        <tr>
-            <th>Field</th>
-            <th>Information</th>
-        </tr>
-
-        <tr>
-            <td>Document Type</td>
-            <td>
-                Certificate of Competency for Seafarer
-            </td>
-        </tr>
-
-        <tr>
-            <td>Date of Issue</td>
-            <td>15.05.2023</td>
-        </tr>
-
-        <tr>
-            <td>Valid Until</td>
-            <td>15.05.2028</td>
-        </tr>
-
-        <tr>
-            <td>Issuing Authority</td>
-            <td>
-                State Service for Maritime and Inland Waterway
-                Transport and Shipping of Ukraine
-            </td>
-        </tr>
-
-        <tr>
-            <td>Country</td>
-            <td>Ukraine</td>
-        </tr>
-
-    </table>
-
-
-    <!-- MARITIME POSITIONS -->
-
-    <div class="section-title">
-        Maritime Positions / Ranks
+    <div class="sub">
+      Перевірка свідоцтва про компетентність моряка
     </div>
 
-    <table>
-
-        <tr>
-            <th>Position</th>
-            <th>English</th>
-        </tr>
-
-        <tr>
-            <td>Старший помічник капітана</td>
-            <td>Chief Officer</td>
-        </tr>
-
-        <tr>
-            <td>Другий помічник капітана</td>
-            <td>Second Officer</td>
-        </tr>
-
-        <tr>
-            <td>Вахтовий помічник капітана</td>
-            <td>
-                OOW – Officer of the Watch
-            </td>
-        </tr>
-
-    </table>
+  </header>
 
 
-    <!-- DOCUMENTS AND CERTIFICATES -->
+  <section class="content">
 
-    <div class="section-title">
-        Documents and Certificates
+    <div class="photo">
+
+      <img
+        src="IMG_4557.jpeg"
+        alt="Seafarer certificate"
+      >
+
+      <div class="verified">
+        ✓ Документ зареєстровано
+      </div>
+
     </div>
 
-    <table>
 
-        <tr>
-            <th>No.</th>
-            <th>Document / Certificate</th>
-        </tr>
+    <div class="details">
 
-        <tr>
-            <td>1</td>
-            <td>
-                Certificate of Competency for Seafarer
-            </td>
-        </tr>
+      <div class="row">
+        <div class="label">
+          Прізвище / Surname
+        </div>
+        <div class="value">
+          MOTAMEDKIA
+        </div>
+      </div>
 
-        <tr>
-            <td>2</td>
-            <td>
-                Seafarer's Identity Document
-                (Seafarer's Passport)
-            </td>
-        </tr>
+      <div class="row">
+        <div class="label">
+          Ім'я / Given name
+        </div>
+        <div class="value">
+          ALIREZA
+        </div>
+      </div>
 
-        <tr>
-            <td>3</td>
-            <td>
-                Safety at Sea
-                (Four Basic STCW Certificates)
-            </td>
-        </tr>
+      <div class="row">
+        <div class="label">
+          По батькові / Father's name
+        </div>
+        <div class="value">
+          MAJID
+        </div>
+      </div>
 
-        <tr>
-            <td>4</td>
-            <td>
-                Fire Safety and Fire Fighting
-                (Advanced Level)
-            </td>
-        </tr>
+      <div class="row">
+        <div class="label">
+          Дата народження / Date of birth
+        </div>
+        <div class="value">
+          14.11.2003
+        </div>
+      </div>
 
-        <tr>
-            <td>5</td>
-            <td>
-                Elementary First Aid
-            </td>
-        </tr>
+      <div class="row">
+        <div class="label">
+          Громадянство / Nationality
+        </div>
+        <div class="value">
+          IRAN
+        </div>
+      </div>
 
-        <tr>
-            <td>6</td>
-            <td>
-                Personal Survival Techniques
-            </td>
-        </tr>
+      <div class="row">
+        <div class="label">
+          Номер документа / Document No.
+        </div>
+        <div class="value">
+          UA-COC-2023-0142
+        </div>
+      </div>
 
-        <tr>
-            <td>7</td>
-            <td>
-                Seafarer's Medical Certificate
-            </td>
-        </tr>
+      <div class="row">
+        <div class="label">
+          Дата видачі / Date of issue
+        </div>
+        <div class="value">
+          15.05.2023
+        </div>
+      </div>
 
-    </table>
+      <div class="row">
+        <div class="label">
+          Дійсне до / Valid until
+        </div>
+        <div class="value">
+          15.05.2028
+        </div>
+      </div>
 
-</div>
+    </div>
+
+  </section>
+
+
+  <section class="section">
+
+    <h2>
+      Морські посади / звання
+    </h2>
+
+    <div class="list">
+
+      <div class="item">
+        Старший помічник капітана
+        (Chief Officer)
+      </div>
+
+      <div class="item">
+        Другий помічник капітана
+        (Second Officer)
+      </div>
+
+      <div class="item">
+        Вахтовий помічник капітана
+        (OOW – Officer of the Watch)
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="section">
+
+    <h2>
+      Документи та сертифікати моряка
+    </h2>
+
+    <div class="list">
+
+      <div class="item">
+        1. Свідоцтво про компетентність моряка
+      </div>
+
+      <div class="item">
+        2. Посвідчення особи моряка
+        (Моряцький паспорт)
+      </div>
+
+      <div class="item">
+        3. Безпека на морі
+        (Чотири базові сертифікати STCW)
+      </div>
+
+      <div class="item">
+        4. Пожежна безпека та боротьба з пожежею
+      </div>
+
+      <div class="item">
+        5. Надання першої медичної допомоги
+      </div>
+
+      <div class="item">
+        6. Виживання на морі
+      </div>
+
+      <div class="item">
+        7. Медична картка моряка
+      </div>
+
+      <div class="item">
+        8. Сертифікат з радіолокації
+      </div>
+
+      <div class="item">
+        9. Сертифікат GMDSS
+      </div>
+
+      <div class="item">
+        10. Сертифікат ISPS
+      </div>
+
+      <div class="item">
+        11. Сертифікат IDH
+      </div>
+
+      <div class="item">
+        12. Сертифікат про проходження
+        тренажерної підготовки
+        з радіолокації та ARPA
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+    Certificate of Competency Verification — Seafarer
+  </footer>
+
+</main>
 
 </body>
 </html>
